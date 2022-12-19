@@ -8,6 +8,13 @@ We fine-tune LatinBERT for each lemma separately in the same way as [Bamman et a
 
 To perform training and save each fine-tuned model, run the code in the run.ipynb notebook in this repository.
 
+### Inference
+
+Once having trained the model, the following cell in the run.ipynb use them to perform inference on Latin-ISE and store them in a file called test_results.csv
+
+We performed additional postprocessing to add metadata to each sentence annotated with the respective sense and we stored the final results in a file named predictions_latinise_with_senses.csv 
+
 ### Analysis
 
 To generate our images run the analyse.ipynb notebook in this repository.
+
