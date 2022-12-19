@@ -1,7 +1,11 @@
 # Latin-ISE WSD
-This repository contains the code and the results of a large scale word sense disambiguation analysis on Latin-ISE corpus.
+This repository contains the code and the preliminary results of word sense disambiguation experiments in Latin.
 
-The repository itself is a pseudo-fork of the original [LatinBERT repository](https://github.com/dbamman/latin-bert) and it closely follows the word sense disambiguation setting of [Bamman et al. (2020)](https://arxiv.org/abs/2009.10053), while using their BERT model pre-trained on latin corpora as described in the original paper.
+The repository itself is a pseudo-fork of the original [LatinBERT repository](https://github.com/dbamman/latin-bert) and it closely follows the word sense disambiguation setting of [Bamman and Burns (2020)](https://arxiv.org/abs/2009.10053), while using their BERT model pre-trained on latin corpora as described in the original paper.
+
+Compared with Bamman and Burns (2020), we used all macro-senses from the Lewis and Short Latin-English dictionary. We ran the algorithm on the LatinISE corpus (McGillivray and Kilgarriff 2013).
+
+B. McGillivray, A. Kilgarriff, Tools for historical corpus research, and a corpus of Latin, in: P. Bennett, M. Durrell, S. Scheible, R. J. Whitt (Eds.), New Methods in Historical Corpus Linguistics, Narr, Tübingen, 2013.
 
 ### Install
 
