@@ -18,3 +18,8 @@ We performed additional postprocessing to add metadata to each sentence annotate
 
 To generate our images run the analyse.ipynb notebook in this repository.
 
+### figures
+The figures folder contains the plot of senses frequencies in LatinISE across centuries for each of the 134 lemmas analysed. In each figure, the y axis represent absolute frequency while the x axis is the time period covered (discretized in 50 years bins).
+
+### figures_prose_poetry
+The figures_prose_poetry folder contains the plot of senses frequencies in LatinISE across centuries for each of the 134 lemmas analysed. In each figure, the y axis represent absolute frequency while the x axis is the time period covered (discretized in 50 years bins). Additionally, here we created 2 plots for each lemma, one for prose works and one for poetry works so as to account for differences in register that might arise from different literary genres.
