@@ -1,29 +1,13 @@
-# latin-bert/case\_studies/wsd
+# Word Sense Disambiguation
 
-Carry out the following the reproduce results from the WSD experiments in Bamman and Burns (2020); results are saved to the logs/ directory.
+This repository contains the code to generate the images contained in figures and figures_prose_poetry, which in turn represent the frequency of senses for each lemma analysed in Latin-ISE across centuries either in general (figures) or divided by macro-genre, i.e. poetry and prose (figures_prose_poetry).
 
-Get Lewis and Short from Perseus Github:
+### Training
 
-```sh
-wget --no-check-certificate https://github.com/PerseusDL/lexica/raw/master/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng1.xml 
-mv lat.ls.perseus-eng1.xml data/
-```
+We fine-tune LatinBERT for each lemma separately in the same way as [Bamman et al. (2020)](https://arxiv.org/abs/2009.10053), but with the difference that we include every macro-sense listed in the relative entry from Lewis & Short dictionary, as opposed to just the first two as in the original paper. Furthermore, we filter out 66 lemmas from the original list of Bamman et al., as we deemed them not interesting from the point of view of diachronic semantic change.
 
-Extract sense data to create WSD training/evaluation data:
+To perform training and save each fine-tuned model, run the code in the run.ipynb notebook in this repository.
 
-```sh
-python3 scripts/parse_ls.py data/lat.ls.perseus-eng1.xml > data/senses.txt
-python3 scripts/create_wsd_data.py data/senses.txt data/latin.lemmas.txt > data/latin.sense.data
-```
+### Analysis
 
-Train and evaluate BERT model:
-
-```sh
-python3 scripts/latin_wsd_bert.py -m train --bertPath ../../models/latin_bert --tokenizerPath ../../models/subword_tokenizer_latin/latin.subword.encoder -f data/wsd_bert.model --max_epochs 100 -i data/latin.sense.data > logs/wsd_bert.log 2>&1
-```
-
-Train and evaluate static embeddings model:
-
-```sh
-python3 scripts/latin_wsd_static.py -m train -f data/wsd_static.model --max_epochs 100 -i data/latin.sense.data -e ../../models/latin.200.vectors.txt > logs/wsd_static.log 2>&1
-```
+To generate our images run the analyse.ipynb notebook in this repository.
