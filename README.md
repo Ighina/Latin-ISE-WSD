@@ -37,4 +37,4 @@ python3 -c "from cltk.data.fetch import FetchCorpus; corpus_downloader = FetchCo
 
 ### Use
 
-All the code related to the word sense disambiguation analysis is contained in the wsd folder of this same repository, while this parent directory contains the pre-trained LatinBERT and other utils functions.
+All the code related to the word sense disambiguation analysis is contained in the wsd folder of this same repository, while this parent directory contains the pre-trained LatinBERT and other utils functions. See https://github.com/Ighina/Latin-ISE-WSD/tree/master/wsd#readme for details.
