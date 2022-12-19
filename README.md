@@ -1,4 +1,5 @@
-# Latin-ISE WSD
+# Latin WSD experiments
+
 This repository contains the code and the preliminary results of word sense disambiguation experiments in Latin.
 
 The repository itself is a pseudo-fork of the original [LatinBERT repository](https://github.com/dbamman/latin-bert) and it closely follows the word sense disambiguation setting of [Bamman and Burns (2020)](https://arxiv.org/abs/2009.10053), while using their BERT model pre-trained on latin corpora as described in the original paper.
